@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <h1>Owned Stocks</h1>
+    <table class="fitable" border="1">
+        <thead>
+            <tr>
+                <th>Symbols</th>
+                <th>Company Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+                {% for quote in quotes %}
+                    <tr>
+                        <td>{{ quote.symbol }}</td>
+                        <td>{{ quote.name }}</td>
+                        <td>{{ quote.shares }}</td>
+                        <td>{{ quote.price | usd }}</td>
+                        <td>{{ quote.total | usd }}</td>
+                    </tr>
+                {% endfor %}
+        </tbody>
+    </table>
+    <table class="fitable" border="1">
+        <thead>
+            <tr>
+                <th>Balance</th>
+                <th>Total Earning In Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ balance | round(2) | usd }}</td>
+                <td>{{ sum | usd}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

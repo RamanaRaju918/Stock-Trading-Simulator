@@ -1,0 +1,42 @@
+/* Stock Trading Simulator styling */
+
+body {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    color: #212529;
+    background: #f8f9fa;
+}
+
+nav .navbar-brand {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+main {
+    min-height: calc(100vh - 72px);
+}
+
+.fitable {
+    border-collapse: collapse;
+    width: min(90%, 900px);
+    margin: 0 auto 24px;
+    background: #fff;
+}
+
+.fitable th,
+.fitable td {
+    padding: 12px 18px;
+    text-align: left;
+}
+
+.error-page h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.error-page p {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+}

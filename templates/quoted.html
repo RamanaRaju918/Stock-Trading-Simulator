@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock Quote
+{% endblock %}
+
+{% block main %}
+    <table class="fitable" border="1">
+        <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Latest Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ quote.name }}</td>
+                <td>{{ quote.price | usd }}</td>
+                <td>{{ quote.symbol }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/quote">
+        <button>Search Again</button>
+    </a>
+{% endblock %}
